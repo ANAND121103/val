@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hey Beautiful , Will You Be My Valentine ?</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #ff4b5c;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        .yes {
+            background: #ff4b5c;
+            color: white;
+        }
+        .no {
+            background: #555;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hey beautiful , will you be my Valentine Forever (21/06/2023 - ∞)? 💖</h1>
+        <div class="buttons">
+            <button class="btn yes" onclick="showLove()">Yes 💘</button>
+            <button class="btn no" onmouseover="moveNo(this)">No 😢</button>
+        </div>
+    </div>
+    
+    <script>
+        function showLove() {
+            document.querySelector('.container').innerHTML = "<h1>Yay! I love you! ❤️</h1><p>You're the most amazing person in my life!</p>";
+        }
+        function moveNo(btn) {
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 100);
+            btn.style.left = `${x}px`;
+            btn.style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
